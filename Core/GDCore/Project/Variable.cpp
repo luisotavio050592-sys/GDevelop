@@ -306,7 +306,7 @@ void Variable::UnserializeFrom(const SerializerElement& element) {
 
   if (IsPrimitive(type)) {
     if (type == Type::String) {
-      SetString(element.GetStringAttribute("value", "0", "Value"));
+      SetString(element.GetStringAttribute("value", "", "Value"));
     } else if (type == Type::Number) {
       SetValue(element.GetDoubleAttribute("value", 0.0, "Value"));
     } else if (type == Type::Boolean) {
